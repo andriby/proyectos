@@ -1,0 +1,284 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@100;200;300;400;500;700&display=swap');
+
+*,
+*::after,
+*::before {
+    padding: 0;
+    margin: 0;
+}
+
+.loader {
+    background-color: #000;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    width: 100vw;
+    animation: load 3s linear forwards;
+    position: fixed;
+    z-index: 9999;
+}
+
+@keyframes load {
+    100%{
+        display: none;
+    }
+}
+
+
+body {
+    background-color: #000;
+    color: #fff;
+    font-family: 'Inter', sans-serif;
+}
+
+svg{
+    margin-bottom: -5px;
+}
+
+.sidebar {
+    float: left;
+    position: fixed;
+    height: 100vh;
+    width: 15vw;
+    min-width: 13rem;
+    padding: 1rem;
+    border-right: 1px solid #8a8a8a63;
+    padding-right: 0;
+}
+
+.img-aside {
+    margin: 1rem 0 2rem .7rem;
+}
+
+.nav {
+    width: 100%;
+    height:90%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-between;
+    list-style: none;
+    font-size: 1.1rem;
+}
+
+.beginning,
+.final {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    gap: .3;
+}
+
+.beginning li,
+.final li {
+    padding: 1.2rem 0;
+    padding-left: .5rem;
+    border-radius: 10px;
+    width: 90%;
+}
+
+.beginning li:hover,
+.final li:hover {
+    background-color: #dbdbdb71;
+    cursor: pointer;
+}
+
+.principal {
+    float: right;
+    width: 80vw;
+}
+
+.contenedor {
+    padding: 4rem 10rem;
+}
+
+.perfil {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 7.5rem;
+}
+
+.biografia {
+    display: flex;
+    flex-direction: column;
+}
+
+
+.foto-de-perfil img {
+    border: 1px solid #323232;
+    padding: .15rem;
+    border-radius: 100%;
+}
+
+.nombre-de-perfil {
+    display: flex;
+    gap: 2rem;
+    margin-bottom: 1.4rem;
+    font-size: .8rem;
+    font-weight: 300;
+}
+
+.nombre-de-perfil h1{
+    font-weight: 300;
+}
+
+.nombre-de-perfil button {
+    background-color: #3d3d3d;
+    color: #fff;
+    padding: .7rem .9rem;
+    border-radius: 10px;
+    border: none;
+}
+
+.estadisticas {
+    display: flex;
+    font-weight: bold;
+    gap: 1.5rem;
+    margin-bottom: 1.2rem;
+}
+
+.nombre span {
+    font-weight: bold;
+}
+
+.nombre {
+    margin-bottom: .6rem;
+}
+
+.threads {
+    background-color: #3d3d3d;
+    width: max-content;
+    padding: .25rem .5rem;
+    border-radius: 15px;
+    margin-bottom: .6rem;
+}
+
+.tipo-de-perfil {
+    margin-bottom: .5rem;
+    color: #adadad;
+}
+
+.descripcion {
+    margin-bottom: .75rem;
+}
+
+.descripcion span {
+    font-weight: bold;
+}
+
+.le-siguen {
+    font-size: .8rem;
+    color: #adadad;
+}
+
+.le-siguen span {
+    font-weight: bold;
+    color: #fff;
+}
+
+.historias-destacadas{
+    margin-top: 3rem;
+    display: flex;
+    flex-direction: row;
+    gap: 3rem;
+}
+
+.historia{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: .5rem;
+    font-weight: 500;
+}
+
+.historia img{
+    border: 1px solid #323232;
+    padding: .15rem;
+    border-radius: 50%;
+    width: 74px;
+    height: 74px;
+}
+
+.tabs{
+    display: flex;
+    justify-content: center;
+    gap: 2rem; 
+    margin-bottom: .5rem;
+}
+
+.tabs div{
+    padding: 1rem 2rem;
+    text-align: center;
+}
+
+.tabs div:first-child{
+    border-top: 1px solid #fff;
+    font-weight: bold;
+}
+
+.tabs div svg{
+    margin-bottom: 1px;
+}
+
+.imagenes{
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+}
+
+.imagen {
+    margin: .1rem;
+    height: 19.8rem;
+}
+
+.imagen img{
+    width: 100%;
+    height: 100%;
+}
+
+/*
+.foto1{
+    background-image: url(../img/foto1.jpg);
+}
+
+.foto2{
+    background-image: url(../img/foto2.jpg);
+}
+
+.foto3{
+    background-image: url(../img/foto3.jpg);
+}
+
+.foto4{
+    background-image: url(../img/foto4.jpeg);
+}
+
+.foto5{
+    background-image: url(../img/foto5.jpg);
+}
+
+.foto6{
+    background-image: url(../img/foto6.jpg);
+}
+
+.foto7{
+    background-image: url(../img/foto7.jpg);
+}
+
+.foto8{
+    background-image: url(../img/foto8.jpg);
+}
+
+.foto9{
+    background-image: url(../img/foto9.jpeg);
+}
+
+.foto10{
+    background-image: url(../img/foto10.jpg);
+}
+
+.foto11{
+    background-image: url(../img/foto11.jpg);
+}/*

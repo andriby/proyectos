@@ -1,0 +1,42 @@
+@import './var-mixin'
+
+footer
+    background-color: #001f36
+    margin-top: 2rem
+    border-top: 1px solid #000
+    padding: 1rem .5rem
+    box-shadow: 0 -2px 3px rgba(0,0 ,0 ,.4 )
+    @include flex(column, start, center, 1rem)
+    div:first-child
+        @include font($titulo-principal)
+        color: #fff
+    div:nth-child(2) 
+        @include flex(column, start, start, .3rem)
+        h3
+            @include font($titulares)
+            color: #fff
+        ul  
+            list-style: none
+            a
+                @include font($contenido)
+                color: #fff
+                text-decoration: none
+    div:last-child
+        @include flex(column, start, start, .5rem)
+        h3
+            @include font($titulares)
+            color: #fff
+        nav
+            @include flex(row, start, center, .75rem)
+            i
+                color: #fff
+                font-size: 1.25rem
+
+@media only screen and (min-width: $small) 
+    footer
+        flex-direction: row
+        justify-content: space-evenly
+
+@media only screen and (min-width: $medium) 
+    footer
+        justify-content: space-around

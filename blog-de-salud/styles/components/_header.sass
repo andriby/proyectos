@@ -1,0 +1,82 @@
+@import './var-mixin'
+
+header
+    @include flex(column, center, center, 10px)
+    background-color: #fff
+    border-bottom: 2px #001f36 solid
+    position: sticky
+    top: 0
+    z-index: 999
+    width: 100%
+    box-shadow: 5px 0 10px rgba(0, 0, 0, .3)
+    div
+        width: 100%
+        z-index: 9999
+
+
+.banner
+    @include flex(row, space-between, center)
+    padding: 1rem 0
+    h1
+        @include font($titulo-principal)
+    div
+        text-align: center
+        width: 33.3%
+        margin: 0 25px
+        &:first-child
+            text-align: left
+            font-family: $contenido
+            cursor: pointer
+            @include flex(row, start, center, 20px)
+        &:last-child
+            text-align: right
+    button
+        font-size: 1.1rem
+        background-color:#79ae92
+        color: #000
+        text-transform: uppercase
+        border-radius: 5px
+        text-align: center
+        border: none        
+        padding: 3px 20px
+        cursor: pointer
+        transition: all ease .2s
+        font-family: $titulares
+        box-shadow: -2px 2px 5px rgba(0,0,0,.3 )
+    button:hover
+        opacity: .9
+        transition: all ease .2s
+
+
+button.comprar
+    display: none
+    background: #001f36
+    border-radius: 0
+    color: #fff
+    font-size: .9rem
+
+
+.header-list
+    display: none
+    @include font($contenido)
+    color: #001f36
+    padding: $p-3
+
+.header-list span:hover
+    cursor: pointer
+    text-decoration: underline
+    text-decoration-color: #3b657a
+
+@media only screen and (min-width: $medium) 
+    h1#titulo
+        font-size: 2rem
+    .header-list
+        @include flex(row, center, center, 10px)
+    button.comprar
+        display: block
+
+@media only screen and (min-width: $large)
+    h1#titulo
+        font-size: 2.5rem
+    .header-list
+            gap: 15px 

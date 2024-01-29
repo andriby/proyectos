@@ -1,0 +1,107 @@
+@import './var-mixin'
+
+.main-articles
+    @include flex(column, center, center, 1rem)
+
+.secondary-articles
+    @include flex(column, center, center, 1rem)
+
+.secondary-article, .main-article, article
+    width: 100%
+    @include flex(row, center, center, 1rem)
+    .article-info
+        @include flex(column, center, center)
+        width: 50%
+        h2, h3
+            @include font($titulares)
+            margin-bottom: .5rem
+        span
+            width: 100%
+            text-align: start
+            margin-bottom: 0
+            font-size: .85rem
+            @include font($contenido)
+    .thumbnail
+        width: 50%
+    img
+        width: 100%
+        border-radius: 10px
+        box-shadow: -2px 2px 5px rgba(0,0,0,.3 )
+        cursor: pointer
+        transition: .2s all ease
+        &:hover
+            opacity: .9
+            transition: .33s all ease-in-out
+            box-shadow: 0 0 10px rgba(0,0,0,.4 )
+
+
+.main-article
+    flex-direction: column
+    .article-info, .thumbnail
+        width: 100%
+        img
+            width: 100%
+        h2
+            font-size: 2rem
+            margin-bottom: 1.1rem
+        p
+            font-size: 1rem
+            margin-bottom: .5rem
+
+.articles
+    display: grid
+    grid-template-columns: repeat(1, 1fr)
+    row-gap: 1rem
+    column-gap: 1rem
+    article
+        flex-direction: column
+        justify-content: start
+        gap: .25rem
+        div, h3
+            width: 100%
+            text-align: start
+        .thumbnail
+            height: 65%
+            img
+                width: 100%
+                height: 100%
+        .article-info
+            justify-content: start
+            height: 35%
+
+@media only screen and (min-width: $small)
+    .secondary-article
+        gap: .5rem
+    .articles
+        row-gap: 1.5rem
+        grid-template-columns: repeat(2, 1fr)
+
+
+@media only screen and (min-width: $medium) 
+    .main-articles
+        @include flex(row, center, start, 1rem)
+
+    .main-article
+        width: 45%
+
+    .secondary-articles
+        width: 55%
+
+    .articles
+        row-gap: 1rem
+
+
+@media only screen and (min-width: $large) 
+    .main-article
+        width: 55%
+
+    .secondary-articles
+        width: 45%
+
+    .articles
+        row-gap: 1rem
+
+@media only screen and (min-width: $extra-large) 
+    .articles
+        row-gap: 1rem
+        grid-template-columns: repeat(3, 1fr)

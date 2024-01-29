@@ -1,0 +1,461 @@
+@import url('https://fonts.googleapis.com/css2?family=Lato:wght@400;700&family=Open+Sans:wght@500;600&family=Poppins:wght@300;400&family=Rethink+Sans:wght@400;500&family=Roboto:wght@400;500;700&display=swap');
+/* 
+fonts:
+    font-family: 'Lato', sans-serif;
+    font-family: 'Open Sans', sans-serif;
+    font-family: 'Roboto', sans-serif;
+*/
+
+*, *::after, *::before{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+body{
+    background-color: #f0f0f0;  
+    overflow-x: hidden;  
+    background-position: center;
+    background-attachment: fixed;
+}
+
+.container{
+    padding: 1rem 2rem;
+}
+
+.header{
+    width: 100vw;
+    height: 120vh;
+    background: rgb(240,240,240);
+    background: linear-gradient(0deg, rgba(240,240,240,1) 0%, rgba(47,110,247,1) 42%, rgba(0,36,179,1) 96%);
+}
+
+.main{
+    background: rgb(189,189,189);
+    background: linear-gradient(0deg, rgba(189,189,189,1) 19%, rgba(232,232,232,1) 51%, rgba(240,240,240,1) 68%);
+    background-position: center;
+    background-size: cover;
+    background-attachment: local;
+}
+
+.bar{
+    width: 100%;
+    padding: .75rem 0;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+}
+
+.bar .logo{
+    width: 3.5rem;
+    margin-left: 1rem;
+}
+
+.nav{
+    width: 35rem;
+    margin-right: 1rem;
+}
+
+.nav ul{
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    list-style: none;
+}
+
+.nav ul li a{
+    display: inline-block;
+    text-decoration: none;
+    color: #fff;
+    text-transform: uppercase;
+    font-family: 'Lato', sans-serif;
+}
+
+.nav ul li a.button{
+    background-color: #fff;
+    color: #1a9edb;
+    padding: .3rem .6rem;
+    border-radius: 20px;
+}
+
+.nav ul li a.button:hover{
+    text-decoration: none;
+}
+
+.nav ul li a:hover{
+    text-decoration: underline;
+    font-weight: bold;
+}
+
+#welcome{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 90vh;
+}
+
+.left-right{
+    background: rgb(224,224,224);
+    background: linear-gradient(243deg, rgba(224,224,224,1) 0%, rgba(228,228,228,0.6558998599439776) 39%, rgba(207,199,199,0.7091211484593838) 100%);
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: 60%;
+    border-radius: 15px;
+    box-shadow: -5px 5px 10px rgba(0, 0, 0, .3);
+}
+
+.left, .right{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 20rem;
+    padding: 1rem;
+    gap: 1rem;
+}
+
+.right{
+    border-radius: 0 10px 10px 0;
+    text-align: center;
+    width: 60%;
+    gap: 20px;
+}
+
+.left{
+    border-radius: 10px 0 0 10px;
+    width: 40%;
+}
+
+.img-welcome{
+    height: 100%;
+}
+
+.right .title{
+    color: #161A42;
+    text-transform: uppercase;
+    font-family: 'Lato', sans-serif;
+}
+
+.right p{
+    font-family: 'Rethink Sans', sans-serif;
+    font-weight: 500;
+    padding: .5rem;
+    font-size: 1.1rem;
+}
+
+#products{
+    margin-top: 5rem;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    gap: 1.5rem;
+    padding: 4rem 2rem;
+    text-align: center;
+}
+
+#products h2{
+    color: #161A42;
+    font-family: 'Open Sans', sans-serif;
+    font-weight: 500;
+    font-weight: 300;
+    text-align: center;
+    font-size: 2.5rem;
+    letter-spacing: 4px;
+    text-transform: uppercase;
+    margin-bottom: 2rem;
+}
+
+#products .cards{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    align-items: center;
+    gap: 2.5rem;
+}
+
+#products .cards .card{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    height: 15rem;
+    justify-content: center;
+    gap: 1rem;
+    box-shadow: 0 0 10px rgba(0, 0, 0, .2);
+    width:75%;
+    background-color: #f9f9f9;
+    font-family: 'Roboto', sans-serif;
+    font-size: large;
+    border-radius: 10px;
+}
+
+#products .cards .card-title{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: #1090CD;
+    height: 100%;
+    color: #fff;
+    width: 20%; 
+    text-align: center;
+    font-family: 'Lato', sans-serif;
+    text-transform: uppercase;
+    font-size: 1.8rem;
+    border-radius: 10px 0 0 10px;
+    box-shadow: 2px 0 5px rgba(0, 0, 0, .2);
+    padding: 0 .5rem;
+}
+
+#products .cards .card .card-body{
+    padding: 2rem 1rem;
+    width: 80%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-between;
+    gap: 1.5rem;
+}
+
+#products .cards .card a{
+    width: 25%;
+    text-decoration: none;
+    padding: .75rem 1.05rem;
+    font-size: 1.1rem;
+    border-radius: 5px;
+    border: 1px solid #0081FF;
+    background-color: #0081FF;
+    box-shadow: 0 0 10px rgba(0, 0, 0, .2);
+    color: #fff;
+    font-family: 'Roboto', sans-serif;
+    text-transform: uppercase;
+    cursor: pointer;
+    transition: all ease .25s;
+}
+
+#products .cards .card a:hover{
+    background-color: #fff;
+    box-shadow: 0 0 15px rgba(0, 0, 0, .3);
+    color: #0081FF;
+    transition: all ease .5s;
+}
+
+#movistar_plus{
+    height: 60vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+#movistar_plus .card{
+    background: rgb(58,62,180);
+    background: linear-gradient(90deg, rgba(58,62,180,1) 0%, rgba(29,101,253,1) 50%, rgba(69,171,252,1) 100%);
+    box-shadow: -5px 5px 12px rgba(0, 0, 0, .3);
+    border: 2px solid #ffffff96;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: 95%;
+    padding: 3.5rem 2rem;
+    border-radius: 15px;
+}
+
+#movistar_plus .card .movistar_plus-title{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 1.5rem;
+    color: #fff;
+    font-family: 'Lato', sans-serif;
+    text-transform: uppercase;
+    font-weight: 600;
+    width: 50%;
+    font-size: 4rem;
+    padding: .5rem;
+}
+
+#movistar_plus .card .movistar_plus-title p{
+    font-family: 'Rethink Sans', sans-serif;
+    font-weight: 500;
+    font-size: 1rem;
+    text-align: center;
+}
+
+#movistar_plus .card .movistar_plus-title a{
+    width: 25%;
+    text-align: center;
+    padding: .75rem 1.05rem;
+    text-decoration: none;
+    font-size: 1.1rem;
+    border: none;
+    border-radius: 5px;
+    background-color: #fff;
+    border: 1px solid;
+    box-shadow: 0 0 10px rgba(0, 0, 0, .2);
+    color: #1d65fd;
+    font-family: 'Roboto', sans-serif;
+    text-transform: uppercase;
+    cursor: pointer;
+    transition: .2s all ease-in;
+}
+
+#movistar_plus .card .movistar_plus-title a:hover{
+    background: none;
+    color: #fff;
+    border: 1px solid #fff;
+    transition: .45s all ease-in-out;
+    transform: translateY(-4px);
+    transform: scale(1px);
+}
+
+#movistar_plus .card .movistar_plus-img{
+    width: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: .5rem;
+}
+
+#movistar_plus .card .movistar_plus-img img{
+    width: 60%;
+}
+
+
+#phone {
+    height: 50vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+#phone .phrase{
+    width: 100%;
+    padding: 2rem;
+    background-color: #245DEE;
+    text-align: center;
+    font-size: 5rem;
+    text-transform: uppercase;
+    font-family: 'Lato', sans-serif;
+    font-weight: 600;
+    letter-spacing: 3px;
+    color: #fff;
+    box-shadow: 0 0 15px rgba(0, 0, 0, .4);
+}
+
+#gallery h2{
+    color: #161A42;
+    font-family: 'Open Sans', sans-serif;
+    font-weight: 500;
+    font-weight: 300;
+    text-align: center;
+    font-size: 2.5rem;
+    letter-spacing: 4px;
+    text-transform: uppercase;
+    margin-top: 2rem;
+}
+
+#gallery-images{
+    margin-top: 1rem;
+    box-shadow: 0 0 15px rgba(0, 0, 0, .4);
+    width: 100%;
+    height: 85vh;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 5rem;
+}
+
+#gallery-images div{
+    width: 33.3%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+#gallery-images .internet{
+    height: 100%;
+    background-image: url(../assets/internet.jpg);
+    background-size: cover;
+    filter: drop-shadow(1);
+}
+
+#gallery-images .phone{
+    height: 100%;
+    background-image: url(../assets/linea-movil.jpg);
+    background-size: cover;
+    filter: drop-shadow(1);
+}
+
+#gallery-images .telephone{
+    height: 100%;
+    background-image: url(../assets/telefono-fijo.jpg);
+    background-size: cover;
+    filter: drop-shadow(1);
+}
+
+#gallery-images div h2{
+    color: #fff;
+    -webkit-text-stroke: #000 1px;
+    font-family: 'Open Sans', sans-serif;
+    font-weight: 600;
+    text-align: center;
+    font-size: 3.5rem;
+    letter-spacing: 4px;
+    text-transform: uppercase;
+    margin-bottom: 2rem;
+}
+
+#user_actives{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+#user_actives .user_actives-title{
+    color: #161A42;
+    font-family: 'Open Sans', sans-serif;
+    font-weight: 300;
+    text-align: center;
+    font-size: 2.5rem;
+    letter-spacing: 4px;
+    text-transform: uppercase;
+    margin-bottom: 2rem;
+}
+
+#user_actives .numbers{
+    display: flex;
+    flex-direction: row;
+    gap: 1rem;
+    justify-content: space-evenly;
+    width: 30%;
+    margin-bottom: 5rem;
+
+}
+
+#user_actives .numbers span{
+    background: rgb(25,25,25);
+    background: linear-gradient(0deg, rgba(25,25,25,0.6) 0%, rgba(43,43,43,0.6026785714285714) 100%);
+    box-shadow: -5px 5px 10px rgba(0, 0, 0, .4);
+    border-radius: 10px;
+    padding: .3rem 1rem;
+    font-size: 6rem;
+    color: #ffffff;
+    font-family: 'Lato', sans-serif;
+    font-weight: 500;
+}
+
+#footer{
+    background-color: #161A42;
+    padding: 1rem  0 .5rem 0; 
+}
+
+.copyright{
+    width: 100%;
+    text-align: center;
+    color: #fff;
+    text-transform: uppercase;
+    font-family: 'Lato', sans-serif;
+}

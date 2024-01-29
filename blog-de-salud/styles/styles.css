@@ -1,0 +1,412 @@
+@import url("https://fonts.googleapis.com/css2?family=Assistant:wght@300;400;500;700&family=Oswald:wght@400;500;700&family=Unna:wght@400;700&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Assistant:wght@300;400;500;700&family=Oswald:wght@400;500;700&family=Unna:wght@400;700&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Assistant:wght@300;400;500;700&family=Oswald:wght@400;500;700&family=Unna:wght@400;700&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Assistant:wght@300;400;500;700&family=Oswald:wght@400;500;700&family=Unna:wght@400;700&display=swap");
+*, *:after, *:before {
+  margin: 0;
+  padding: 0;
+}
+
+header {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 10px;
+  background-color: #fff;
+  border-bottom: 2px #001f36 solid;
+  position: sticky;
+  top: 0;
+  z-index: 999;
+  width: 100%;
+  box-shadow: 5px 0 10px rgba(0, 0, 0, 0.3);
+}
+header div {
+  width: 100%;
+  z-index: 9999;
+}
+
+.banner {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  gap: 0;
+  padding: 1rem 0;
+}
+.banner h1 {
+  font-family: "Assistant", sans-serif;
+  color: #001f36;
+  font-weight: 700;
+  font-size: 1.5rem;
+  text-transform: uppercase;
+}
+.banner div {
+  text-align: center;
+  width: 33.3%;
+  margin: 0 25px;
+}
+.banner div:first-child {
+  text-align: left;
+  font-family: "Unna", serif;
+  cursor: pointer;
+  display: flex;
+  flex-direction: row;
+  justify-content: start;
+  align-items: center;
+  gap: 20px;
+}
+.banner div:last-child {
+  text-align: right;
+}
+.banner button {
+  font-size: 1.1rem;
+  background-color: #79ae92;
+  color: #000;
+  text-transform: uppercase;
+  border-radius: 5px;
+  text-align: center;
+  border: none;
+  padding: 3px 20px;
+  cursor: pointer;
+  transition: all ease 0.2s;
+  font-family: "Oswald", sans-serif;
+  box-shadow: -2px 2px 5px rgba(0, 0, 0, 0.3);
+}
+.banner button:hover {
+  opacity: 0.9;
+  transition: all ease 0.2s;
+}
+
+button.comprar {
+  display: none;
+  background: #001f36;
+  border-radius: 0;
+  color: #fff;
+  font-size: 0.9rem;
+}
+
+.header-list {
+  display: none;
+  font-family: "Unna", serif;
+  font-size: 0.9rem;
+  color: #525252;
+  color: #001f36;
+  padding: 12px;
+}
+
+.header-list span:hover {
+  cursor: pointer;
+  text-decoration: underline;
+  text-decoration-color: #3b657a;
+}
+
+@media only screen and (min-width: 768px) {
+  h1#titulo {
+    font-size: 2rem;
+  }
+  .header-list {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+  }
+  button.comprar {
+    display: block;
+  }
+}
+@media only screen and (min-width: 992px) {
+  h1#titulo {
+    font-size: 2.5rem;
+  }
+  .header-list {
+    gap: 15px;
+  }
+}
+.main-articles {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 1rem;
+}
+
+.secondary-articles {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 1rem;
+}
+
+.secondary-article, .main-article, article {
+  width: 100%;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  gap: 1rem;
+}
+.secondary-article .article-info, .main-article .article-info, article .article-info {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 0;
+  width: 50%;
+}
+.secondary-article .article-info h2, .secondary-article .article-info h3, .main-article .article-info h2, .main-article .article-info h3, article .article-info h2, article .article-info h3 {
+  font-family: "Oswald", sans-serif;
+  color: #001f36;
+  font-weight: 400;
+  font-size: 1.1rem;
+  text-decoration: underline;
+  text-decoration-color: #1c5560;
+  cursor: pointer;
+  color: #151922;
+  margin-bottom: 0.5rem;
+}
+.secondary-article .article-info h2:hover, .secondary-article .article-info h3:hover, .main-article .article-info h2:hover, .main-article .article-info h3:hover, article .article-info h2:hover, article .article-info h3:hover {
+  color: #3b657a;
+}
+.secondary-article .article-info span, .main-article .article-info span, article .article-info span {
+  width: 100%;
+  text-align: start;
+  margin-bottom: 0;
+  font-size: 0.85rem;
+  font-family: "Unna", serif;
+  font-size: 0.9rem;
+  color: #525252;
+}
+.secondary-article .thumbnail, .main-article .thumbnail, article .thumbnail {
+  width: 50%;
+}
+.secondary-article img, .main-article img, article img {
+  width: 100%;
+  border-radius: 10px;
+  box-shadow: -2px 2px 5px rgba(0, 0, 0, 0.3);
+  cursor: pointer;
+  transition: 0.2s all ease;
+}
+.secondary-article img:hover, .main-article img:hover, article img:hover {
+  opacity: 0.9;
+  transition: 0.33s all ease-in-out;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.4);
+}
+
+.main-article {
+  flex-direction: column;
+}
+.main-article .article-info, .main-article .thumbnail {
+  width: 100%;
+}
+.main-article .article-info img, .main-article .thumbnail img {
+  width: 100%;
+}
+.main-article .article-info h2, .main-article .thumbnail h2 {
+  font-size: 2rem;
+  margin-bottom: 1.1rem;
+}
+.main-article .article-info p, .main-article .thumbnail p {
+  font-size: 1rem;
+  margin-bottom: 0.5rem;
+}
+
+.articles {
+  display: grid;
+  grid-template-columns: repeat(1, 1fr);
+  row-gap: 1rem;
+  column-gap: 1rem;
+}
+.articles article {
+  flex-direction: column;
+  justify-content: start;
+  gap: 0.25rem;
+}
+.articles article div, .articles article h3 {
+  width: 100%;
+  text-align: start;
+}
+.articles article .thumbnail {
+  height: 65%;
+}
+.articles article .thumbnail img {
+  width: 100%;
+  height: 100%;
+}
+.articles article .article-info {
+  justify-content: start;
+  height: 35%;
+}
+
+@media only screen and (min-width: 600px) {
+  .secondary-article {
+    gap: 0.5rem;
+  }
+  .articles {
+    row-gap: 1.5rem;
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+@media only screen and (min-width: 768px) {
+  .main-articles {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: start;
+    gap: 1rem;
+  }
+  .main-article {
+    width: 45%;
+  }
+  .secondary-articles {
+    width: 55%;
+  }
+  .articles {
+    row-gap: 1rem;
+  }
+}
+@media only screen and (min-width: 992px) {
+  .main-article {
+    width: 55%;
+  }
+  .secondary-articles {
+    width: 45%;
+  }
+  .articles {
+    row-gap: 1rem;
+  }
+}
+@media only screen and (min-width: 1200px) {
+  .articles {
+    row-gap: 1rem;
+    grid-template-columns: repeat(3, 1fr);
+  }
+}
+footer {
+  background-color: #001f36;
+  margin-top: 2rem;
+  border-top: 1px solid #000;
+  padding: 1rem 0.5rem;
+  box-shadow: 0 -2px 3px rgba(0, 0, 0, 0.4);
+  display: flex;
+  flex-direction: column;
+  justify-content: start;
+  align-items: center;
+  gap: 1rem;
+}
+footer div:first-child {
+  font-family: "Assistant", sans-serif;
+  color: #001f36;
+  font-weight: 700;
+  font-size: 1.5rem;
+  text-transform: uppercase;
+  color: #fff;
+}
+footer div:nth-child(2) {
+  display: flex;
+  flex-direction: column;
+  justify-content: start;
+  align-items: start;
+  gap: 0.3rem;
+}
+footer div:nth-child(2) h3 {
+  font-family: "Oswald", sans-serif;
+  color: #001f36;
+  font-weight: 400;
+  font-size: 1.1rem;
+  text-decoration: underline;
+  text-decoration-color: #1c5560;
+  cursor: pointer;
+  color: #151922;
+  color: #fff;
+}
+footer div:nth-child(2) h3:hover {
+  color: #3b657a;
+}
+footer div:nth-child(2) ul {
+  list-style: none;
+}
+footer div:nth-child(2) ul a {
+  font-family: "Unna", serif;
+  font-size: 0.9rem;
+  color: #525252;
+  color: #fff;
+  text-decoration: none;
+}
+footer div:last-child {
+  display: flex;
+  flex-direction: column;
+  justify-content: start;
+  align-items: start;
+  gap: 0.5rem;
+}
+footer div:last-child h3 {
+  font-family: "Oswald", sans-serif;
+  color: #001f36;
+  font-weight: 400;
+  font-size: 1.1rem;
+  text-decoration: underline;
+  text-decoration-color: #1c5560;
+  cursor: pointer;
+  color: #151922;
+  color: #fff;
+}
+footer div:last-child h3:hover {
+  color: #3b657a;
+}
+footer div:last-child nav {
+  display: flex;
+  flex-direction: row;
+  justify-content: start;
+  align-items: center;
+  gap: 0.75rem;
+}
+footer div:last-child nav i {
+  color: #fff;
+  font-size: 1.25rem;
+}
+
+@media only screen and (min-width: 600px) {
+  footer {
+    flex-direction: row;
+    justify-content: space-evenly;
+  }
+}
+@media only screen and (min-width: 768px) {
+  footer {
+    justify-content: space-around;
+  }
+}
+body {
+  background-color: #f8f8f8;
+}
+
+main {
+  padding: 20px;
+  margin-top: 1rem;
+}
+
+@media only screen and (min-width: 600px) {
+  main {
+    padding: 1rem 4rem;
+  }
+}
+@media only screen and (min-width: 768px) {
+  main {
+    padding: 1rem 5rem;
+  }
+}
+@media only screen and (min-width: 992px) {
+  main {
+    padding: 1rem 6rem;
+  }
+}
+@media only screen and (min-width: 1200px) {
+  main {
+    padding: 1rem 8rem;
+  }
+}
+
+/*# sourceMappingURL=styles.css.map */
